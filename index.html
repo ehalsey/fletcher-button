@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Sound</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #clickButton {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            background-color: red;
+            color: white;
+            border: 6px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #clickButton:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton"></button>
+    <audio id="clickSound" src="click.wav"></audio>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('clickSound').play();
+        });
+    </script>
+</body>
+</html>
